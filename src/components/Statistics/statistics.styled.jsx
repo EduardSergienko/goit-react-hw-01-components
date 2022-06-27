@@ -25,5 +25,5 @@ export const StatisticItem = styled.li`
   height: 60px;
 `;
 export const StatisticLabel = styled.span`
-  color: white;
+  color: #e4e4e4;
 `;
