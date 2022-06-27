@@ -7,7 +7,7 @@ import {
   Thead,
 } from './transactionHistory.styled';
 
-export default function TransactionHistory({ transactions }) {
+export default function TransactionHistory({ items }) {
   return (
     <Table>
       <Thead>
@@ -18,7 +18,7 @@ export default function TransactionHistory({ transactions }) {
         </tr>
       </Thead>
       <tbody>
-        {transactions.map(transaction => {
+        {items.map(transaction => {
           return (
             <TbodyTr key={transaction.id}>
               <TbodyTd>{transaction.type}</TbodyTd>
