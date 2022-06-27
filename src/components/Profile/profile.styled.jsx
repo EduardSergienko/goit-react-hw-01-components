@@ -7,6 +7,8 @@ export const ProfileWrap = styled.div`
   margin: 0 auto;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  overflow: hidden;
 `;
 export const Description = styled.div`
   text-align: center;
@@ -33,6 +35,7 @@ export const UserLocation = styled.p`
 export const StatsList = styled.ul`
   background-color: #f3f6f9;
   display: flex;
+
   /* justify-content: space-around; */
 `;
 export const StatsItem = styled.li`
