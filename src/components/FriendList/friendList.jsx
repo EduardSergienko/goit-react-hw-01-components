@@ -1,20 +1,29 @@
+import {
+  FriendsList,
+  FriendOnline,
+  FriendOffline,
+  FriendItem,
+  FriendAvatar,
+  FriendName,
+} from 'components/FriendList/friendList.styled';
+
 export default function FriendList({ friends }) {
   return (
-    <ul className="friend-list">
+    <FriendsList>
       {friends.map(friend => {
         return (
-          <li className="item" key={friend.id}>
-            <span className="status">{friend.isOnline}</span>
-            <img
-              className="avatar"
-              src={friend.avatar}
-              alt={friend.name}
-              width="48"
-            />
-            <p className="name">{friend.name}</p>
-          </li>
+          <FriendItem key={friend.id}>
+            {friend.isOnline ? (
+              <FriendOnline></FriendOnline>
+            ) : (
+              <FriendOffline></FriendOffline>
+            )}
+
+            <FriendAvatar src={friend.avatar} alt={friend.name} width="48" />
+            <FriendName>{friend.name}</FriendName>
+          </FriendItem>
         );
       })}
-    </ul>
+    </FriendsList>
   );
 }
